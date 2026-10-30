@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binggio — Enterprise Context Intelligence</title>
+<meta name="description" content="Binggio answers questions from your data using only meanings a person has approved, shows the proof with every answer, and refuses instead of guessing. Free and open source.">
+<link rel="canonical" href="https://binggio.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://binggio.github.io/">
+<meta property="og:title" content="Binggio — answers from your data you can trust">
+<meta property="og:description" content="Binggio answers questions from your data using only meanings a person has approved, shows the proof with every answer, and refuses instead of guessing. Free and open source.">
+<meta property="og:image" content="https://binggio.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#4b3fd8}a:hover{color:#3a2fb8}
+</style>
+<style>html{scroll-behavior:smooth} @media (max-width:640px){h1{font-size:44px!important} h2{font-size:34px!important} [style*="JetBrains"]{overflow-wrap:anywhere}}</style>
+</head>
+<body>
+<div style="font-family: Inter, 'Segoe UI', system-ui, sans-serif; color: #14233a; background: #ffffff; line-height: 1.5">
+
+<header style="background: #0f1d35; color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 22px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; font-weight: 800; font-size: 24px; letter-spacing: -0.3px">
+<svg width="30" height="30" viewBox="0 0 108 108" aria-hidden="true"><g fill="none" stroke="#ffffff" stroke-width="13" stroke-linejoin="round"><path d="M6.5 41V10.5a4 4 0 0 1 4-4H41"></path><path d="M67 6.5h30.5a4 4 0 0 1 4 4V41"></path><path d="M101.5 67v30.5a4 4 0 0 1-4 4H67"></path><path d="M41 101.5H10.5a4 4 0 0 1-4-4V67"></path></g><circle cx="54" cy="54" r="17.5" fill="#8b83f0"></circle></svg>
+binggio<sup style="font-size: 11px; font-weight: 600; opacity: 0.75">TM</sup></a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 26px; margin-left: auto; align-items: center; font-size: 16px; font-weight: 500">
+<a href="#how" style="color: #c9d4e4; text-decoration: none">How it works</a>
+<a href="#agents" style="color: #c9d4e4; text-decoration: none">For AI agents</a>
+<a href="#trust" style="color: #c9d4e4; text-decoration: none">Security</a>
+<a href="#licence" style="color: #c9d4e4; text-decoration: none">Open source</a>
+<a href="https://github.com/binggio/binggio" style="color: #0f1d35; background: #ffffff; text-decoration: none; font-weight: 700; padding: 10px 18px; border-radius: 10px">GitHub</a>
+</nav>
+</div>
+</header>
+
+<section id="top" style="background: #0f1d35; color: #ffffff; padding: 72px 0 96px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 480px; min-width: 0">
+<p style="margin: 0 0 18px; color: #a49dff; font-weight: 700; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase">Enterprise Context Intelligence</p>
+<h1 style="margin: 0; font-size: 64px; line-height: 1.03; font-weight: 900; letter-spacing: -2px">Answers from your data you can <span style="color: #a49dff">trust.</span></h1>
+<p style="margin: 26px 0 0; font-size: 21px; color: #c9d4e4; max-width: 540px">Binggio answers questions using only the meanings a person has approved: which column is the key, how tables link, what "delinquent" means. When it can't be sure, it refuses and tells you why.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<div style="display: flex; align-items: center; gap: 14px; background: #ffffff; color: #0f1d35; border-radius: 12px; padding: 8px 8px 8px 20px; font-family: 'JetBrains Mono', Consolas, monospace; font-weight: 700; font-size: 18px">
+<span><span style="color: #4b3fd8">$</span> pip install binggio</span>
+<button type="button" id="copy-btn" style="font-family: Inter, sans-serif; font-weight: 700; font-size: 15px; border: 0; border-radius: 9px; background: #4b3fd8; color: #ffffff; padding: 12px 16px; min-height: 44px; cursor: pointer">Copy</button>
+</div>
+<a href="https://github.com/binggio/binggio#see-it-in-action" style="color: #ffffff; text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid #3a4a6b; border-radius: 12px; padding: 14px 20px">Watch the 2-minute demo</a>
+</div>
+<p style="margin: 18px 0 0; color: #8a97b3; font-size: 15px">Free and open source · Runs on your computer · Python 3.10+</p>
+</div>
+
+<div style="flex: 1 1 440px; min-width: 0">
+<div style="background: #ffffff; color: #14233a; border-radius: 20px; padding: 26px; box-shadow: 0 30px 80px rgba(0,0,0,0.45)">
+<p style="margin: 0; font-weight: 700; font-size: 17px">What is the total outstanding balance of delinquent loans for each product?</p>
+<div style="margin-top: 16px; border-top: 1px solid #dfe4ec">
+
+<div style="display: flex; justify-content: space-between; padding: 10px 2px; border-bottom: 1px solid #eef1f5; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 15px"><span>AUTO_LOAN</span><span>98,730,000</span></div>
+
+<div style="display: flex; justify-content: space-between; padding: 10px 2px; border-bottom: 1px solid #eef1f5; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 15px"><span>BUSINESS_LOAN</span><span>123,000,000</span></div>
+
+<div style="display: flex; justify-content: space-between; padding: 10px 2px; border-bottom: 1px solid #eef1f5; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 15px"><span>HOME_LOAN</span><span>105,595,000</span></div>
+
+<div style="display: flex; justify-content: space-between; padding: 10px 2px; border-bottom: 1px solid #eef1f5; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 15px"><span>PERSONAL_LOAN</span><span>89,825,000</span></div>
+
+</div>
+<div style="margin-top: 16px; background: #f4f6f9; border-radius: 14px; padding: 14px 16px; display: grid; grid-template-columns: 76px 1fr; gap: 10px 14px; font-size: 14.5px">
+<span style="color: #5f6f84; font-weight: 600">From</span><span>loan_accounts · loan_repayments</span>
+<span style="color: #5f6f84; font-weight: 600">Term</span><span><b>Delinquent loan</b>: at least one overdue repayment instalment on the as-of date <span style="display: inline-block; margin-left: 6px; background: #e3f3ef; color: #0e6b59; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px">Approved</span></span>
+<span style="color: #5f6f84; font-weight: 600">As of</span><span style="font-family: 'JetBrains Mono', Consolas, monospace">2026-10-19</span>
+<span style="color: #5f6f84; font-weight: 600">Steps</span><span>Started from loan_accounts; applied "Delinquent loan"; summed outstanding_balance; grouped by loan_product</span>
+</div>
+</div>
+<p style="margin: 14px 4px 0; color: #8a97b3; font-size: 14px">A real answer from Binggio's sample bank. Every answer carries its proof.</p>
+</div>
+</div>
+</section>
+
+<section style="padding: 96px 0; background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 460px; min-width: 0">
+<p style="margin: 0 0 12px; color: #4b3fd8; font-weight: 700; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase">The problem</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 850; letter-spacing: -1.2px">AI on company data guesses. Silently.</h2>
+<p style="margin: 22px 0 0; font-size: 19px; color: #3d4c63">Real data has several columns that could mean the same thing. Text-to-SQL picks one, runs it, and returns a confident number. Nobody approved that choice, and nobody can see it was made.</p>
+<p style="margin: 16px 0 0; font-size: 19px; color: #3d4c63">Binggio puts people back in charge of meaning. It suggests, you approve, and answers use nothing else.</p>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; background: #f4f6f9; border-radius: 20px; padding: 28px">
+<p style="margin: 0 0 16px; font-weight: 800; font-size: 18px">Which one is "delinquent"?</p>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 14px; padding: 14px 16px"><div style="font-family: 'JetBrains Mono', Consolas, monospace; font-weight: 700; font-size: 15px">loan_delinquency.days_past_due</div><div style="color: #5f6f84; font-size: 14px; margin-top: 4px">20 · 45 · 90 …</div></div>
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 14px; padding: 14px 16px"><div style="font-family: 'JetBrains Mono', Consolas, monospace; font-weight: 700; font-size: 15px">loan_delinquency.delinquency_band</div><div style="color: #5f6f84; font-size: 14px; margin-top: 4px">DPD_1_30 · DPD_31_60 · DPD_61_PLUS</div></div>
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 14px; padding: 14px 16px"><div style="font-family: 'JetBrains Mono', Consolas, monospace; font-weight: 700; font-size: 15px">loan_repayments.payment_status</div><div style="color: #5f6f84; font-size: 14px; margin-top: 4px">PAID · MISSED · PARTIAL · DUE</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how" style="padding: 96px 0; background: #f4f6f9">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px">
+<p style="margin: 0 0 12px; color: #4b3fd8; font-weight: 700; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase">How it works</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 850; letter-spacing: -1.2px; max-width: 760px">From raw tables to governed answers in four steps.</h2>
+<div style="margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<div style="width: 44px; height: 44px; border-radius: 12px; background: #eeedfc; color: #4b3fd8; font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center">1</div>
+<h3 style="margin: 18px 0 0; font-size: 22px; font-weight: 800">Connect</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">Point Binggio at CSV files, an Excel workbook or a database. It copies the data read-only into a workspace on your computer.</p>
+</div>
+
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<div style="width: 44px; height: 44px; border-radius: 12px; background: #eeedfc; color: #4b3fd8; font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center">2</div>
+<h3 style="margin: 18px 0 0; font-size: 22px; font-weight: 800">Discover</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">It profiles every column and suggests keys, links between tables and what each column means, with the evidence for each.</p>
+</div>
+
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<div style="width: 44px; height: 44px; border-radius: 12px; background: #eeedfc; color: #4b3fd8; font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center">3</div>
+<h3 style="margin: 18px 0 0; font-size: 22px; font-weight: 800">Approve</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">You review and approve: column roles, relationships and business terms like "delinquent loan". Every decision records who and why.</p>
+</div>
+
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<div style="width: 44px; height: 44px; border-radius: 12px; background: #eeedfc; color: #4b3fd8; font-weight: 900; font-size: 20px; display: flex; align-items: center; justify-content: center">4</div>
+<h3 style="margin: 18px 0 0; font-size: 22px; font-weight: 800">Ask</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">Ask in plain words or from an AI agent. Answers use only what was approved and show their proof, or refuse with the reason.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section style="padding: 96px 0; background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px">
+<p style="margin: 0 0 12px; color: #4b3fd8; font-weight: 700; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase">What you get</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 850; letter-spacing: -1.2px; max-width: 760px">Built for people who have to stand behind the number.</h2>
+<div style="margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
+
+<div style="border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Proof with every answer</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">The tables used, the exact approved definition, the as-of date and every step, plus the query that ran.</p>
+</div>
+
+<div style="border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Refusals, not guesses</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">If a question needs a meaning nobody approved, Binggio says what is missing instead of picking something.</p>
+</div>
+
+<div style="border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Relationships found for you</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">Keys and links across tables and systems, suggested with match evidence. Weak matches are left for you to decide.</p>
+</div>
+
+<div style="border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Approvals that expire</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">Approvals are bound to the data they were made on. When the data changes, they go stale until someone confirms them again.</p>
+</div>
+
+<div style="border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">The data story</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">Statistical tests surface what drives your totals, where they concentrate and how they change, from approved measures only.</p>
+</div>
+
+<div style="border: 1px solid #dfe4ec; border-radius: 18px; padding: 26px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Follow-up questions</h3>
+<p style="margin: 10px 0 0; font-size: 16px; color: #3d4c63">Ask "which of these…" and Binggio works on the previous answer, keeping the same governed meanings.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="agents" style="padding: 96px 0; background: #0f1d35; color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 460px; min-width: 0">
+<p style="margin: 0 0 12px; color: #a49dff; font-weight: 700; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase">For AI agents</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 850; letter-spacing: -1.2px">Don't let your agent write SQL.</h2>
+<p style="margin: 22px 0 0; font-size: 19px; color: #c9d4e4">Binggio is an MCP server. Claude Desktop, Claude Code, Cursor and VS Code see only your approved vocabulary. The agent builds a plan; Binggio checks it and runs it read-only, or refuses with the reason.</p>
+<div style="margin-top: 26px; display: flex; flex-direction: column; gap: 12px; font-size: 17px">
+<div style="display: flex; gap: 12px"><span style="color: #3ddc97; font-weight: 900" aria-hidden="true">✓</span><span>No SQL accepted, nothing written to your sources</span></div>
+<div style="display: flex; gap: 12px"><span style="color: #3ddc97; font-weight: 900" aria-hidden="true">✓</span><span>Invented columns are refused, never substituted</span></div>
+<div style="display: flex; gap: 12px"><span style="color: #3ddc97; font-weight: 900" aria-hidden="true">✓</span><span>Agents can propose a meaning; only a person can approve it</span></div>
+</div>
+</div>
+<div style="flex: 1 1 460px; min-width: 0; background: #0a1222; border: 1px solid #2c3a57; border-radius: 18px; overflow: hidden">
+<div style="padding: 14px 18px; background: #121c31; color: #8a97b3; font-size: 14px; font-weight: 600">terminal</div>
+<pre style="margin: 0; padding: 22px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 14.5px; line-height: 1.6; color: #d6e0f5; white-space: pre-wrap"><span style="color: #3ddc97">$</span> binggio connect claude-desktop -w ~/my-bank
+Added Binggio in claude_desktop_config.json
+
+<span style="color: #8a97b3">// agent asks for a column nobody approved</span>
+{"status": <span style="color: #ff8a8e; font-weight: 700">"refused"</span>,
+ "message": <span style="color: #ff8a8e; font-weight: 700">"Unapproved field: CHURN_RISK"</span>,
+ "guidance": "Not answered. Tell the user the reason;
+   do not guess or substitute another column."}</pre>
+</div>
+</div>
+</section>
+
+<section id="trust" style="padding: 96px 0; background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px">
+<p style="margin: 0 0 12px; color: #4b3fd8; font-weight: 700; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase">Security by design</p>
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 850; letter-spacing: -1.2px; max-width: 760px">Your data stays where it is.</h2>
+<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+
+<div style="background: #f4f6f9; border-radius: 18px; padding: 24px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">Runs on your machine</h3>
+<p style="margin: 8px 0 0; font-size: 15.5px; color: #3d4c63">The app runs locally on 127.0.0.1. No cloud service, no account.</p>
+</div>
+
+<div style="background: #f4f6f9; border-radius: 18px; padding: 24px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">Read-only on sources</h3>
+<p style="margin: 8px 0 0; font-size: 15.5px; color: #3d4c63">Nothing is ever written back to your files or databases.</p>
+</div>
+
+<div style="background: #f4f6f9; border-radius: 18px; padding: 24px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">Secrets never stored</h3>
+<p style="margin: 8px 0 0; font-size: 15.5px; color: #3d4c63">Database passwords and model keys stay in memory only, never on disk.</p>
+</div>
+
+<div style="background: #f4f6f9; border-radius: 18px; padding: 24px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 800">A full audit trail</h3>
+<p style="margin: 8px 0 0; font-size: 15.5px; color: #3d4c63">Every approval, rejection and revocation is recorded with a name and a note.</p>
+</div>
+
+</div>
+<p style="margin: 26px 0 0; font-size: 16px; color: #3d4c63">Connects to CSV files, Excel workbooks, SQLite, SQL Server, Oracle and PostgreSQL.</p>
+</div>
+</section>
+
+<section id="licence" style="padding: 96px 0; background: #f4f6f9">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px">
+<h2 style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 850; letter-spacing: -1.2px">Open source, with a path for business.</h2>
+<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
+<div style="background: #ffffff; border: 1px solid #dfe4ec; border-radius: 20px; padding: 32px">
+<p style="margin: 0; color: #0e6b59; font-weight: 800; font-size: 15px; letter-spacing: 1px; text-transform: uppercase">Community</p>
+<h3 style="margin: 10px 0 0; font-size: 30px; font-weight: 850">Free</h3>
+<p style="margin: 12px 0 0; font-size: 16px; color: #3d4c63">The full product under the GNU AGPL v3. Use it, study it, change it, and share your improvements.</p>
+<a href="https://github.com/binggio/binggio" style="display: inline-block; margin-top: 22px; background: #0f1d35; color: #ffffff; text-decoration: none; font-weight: 700; padding: 14px 20px; border-radius: 12px">Get it on GitHub</a>
+</div>
+<div style="background: #ffffff; border: 2px solid #4b3fd8; border-radius: 20px; padding: 32px">
+<p style="margin: 0; color: #4b3fd8; font-weight: 800; font-size: 15px; letter-spacing: 1px; text-transform: uppercase">Commercial</p>
+<h3 style="margin: 10px 0 0; font-size: 30px; font-weight: 850">Talk to us</h3>
+<p style="margin: 12px 0 0; font-size: 16px; color: #3d4c63">A commercial licence for teams that want to embed Binggio in a closed product or service, plus help rolling it out on your data.</p>
+<a href="mailto:ashish@binggio.com?subject=Binggio%20commercial%20licence" style="display: inline-block; margin-top: 22px; background: #4b3fd8; color: #ffffff; text-decoration: none; font-weight: 700; padding: 14px 20px; border-radius: 12px">ashish@binggio.com</a>
+</div>
+</div>
+</div>
+</section>
+
+<section style="padding: 96px 0; background: #0f1d35; color: #ffffff; text-align: center">
+<div style="max-width: 820px; margin: 0 auto; padding: 0 32px">
+<h2 style="margin: 0; font-size: 48px; line-height: 1.08; font-weight: 900; letter-spacing: -1.5px">See it on your own data in five minutes.</h2>
+<div style="margin: 34px auto 0; display: inline-block; text-align: left; background: #0a1222; border: 1px solid #2c3a57; border-radius: 16px; padding: 22px 28px; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 17px; line-height: 1.8; color: #d6e0f5"><span style="color: #3ddc97">$</span> pip install binggio<br><span style="color: #3ddc97">$</span> binggio ui</div>
+<p style="margin: 22px 0 0; color: #c9d4e4; font-size: 17px">Opens in your browser with a ready-made sample bank, or start with your own files.</p>
+</div>
+</section>
+
+<footer style="background: #0b1528; color: #8a97b3; font-size: 14.5px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 36px 32px; display: flex; flex-wrap: wrap; gap: 18px 32px; align-items: center">
+<span style="color: #ffffff; font-weight: 800; font-size: 18px">binggio<sup style="font-size: 10px; opacity: 0.75">TM</sup></span>
+<a href="https://github.com/binggio/binggio" style="color: #c9d4e4">GitHub</a>
+<a href="https://pypi.org/project/binggio/" style="color: #c9d4e4">PyPI</a>
+<a href="mailto:ashish@binggio.com" style="color: #c9d4e4">ashish@binggio.com</a>
+<span style="margin-left: auto">© 2026 Ashish Kumar · Binggio is a trademark of Ashish Kumar · AGPL-3.0</span>
+</div>
+</footer>
+
+</div>
+<script>
+document.getElementById('copy-btn').addEventListener('click', function () {
+  var b = this; try { navigator.clipboard.writeText('pip install binggio'); } catch (e) {}
+  b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600);
+});
+</script>
+</body>
+</html>
