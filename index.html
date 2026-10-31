@@ -32,7 +32,7 @@ binggio<sup style="font-size: 11px; font-weight: 600; opacity: 0.75">TM</sup></a
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 26px; margin-left: auto; align-items: center; font-size: 16px; font-weight: 500">
 <a href="#how" style="color: #c9d4e4; text-decoration: none">How it works</a>
 <a href="#agents" style="color: #c9d4e4; text-decoration: none">For AI agents</a>
-<a href="#trust" style="color: #c9d4e4; text-decoration: none">Security</a>
+<a href="#ai" style="color: #c9d4e4; text-decoration: none">Security</a>
 <a href="#licence" style="color: #c9d4e4; text-decoration: none">Open source</a>
 <a href="https://github.com/binggio/binggio" style="color: #0f1d35; background: #ffffff; text-decoration: none; font-weight: 700; padding: 10px 18px; border-radius: 10px">GitHub</a>
 </nav>
@@ -185,6 +185,7 @@ binggio<sup style="font-size: 11px; font-weight: 600; opacity: 0.75">TM</sup></a
 <div style="display: flex; gap: 12px"><span style="color: #3ddc97; font-weight: 900" aria-hidden="true">✓</span><span>Invented columns are refused, never substituted</span></div>
 <div style="display: flex; gap: 12px"><span style="color: #3ddc97; font-weight: 900" aria-hidden="true">✓</span><span>Agents can propose a meaning; only a person can approve it</span></div>
 </div>
+<p style="margin: 22px 0 0; font-size: 15px; color: #8a97b3">Your agent receives the answers it asks for, so it can show them to you. Binggio itself never sends rows to a model.</p>
 </div>
 <div style="flex: 1 1 460px; min-width: 0; background: #0a1222; border: 1px solid #2c3a57; border-radius: 18px; overflow: hidden">
 <div style="padding: 14px 18px; background: #121c31; color: #8a97b3; font-size: 14px; font-weight: 600">terminal</div>
@@ -228,6 +229,27 @@ Added Binggio in claude_desktop_config.json
 
 </div>
 <p style="margin: 26px 0 0; font-size: 16px; color: #3d4c63">Connects to CSV files, Excel workbooks, SQLite, SQL Server, Oracle and PostgreSQL.</p>
+<div id="ai" style="margin-top: 48px; background: #0f1d35; color: #ffffff; border-radius: 22px; padding: 36px">
+<h3 style="margin: 0; font-size: 30px; font-weight: 850; letter-spacing: -0.6px">What the AI model sees, and what it never sees</h3>
+<p style="margin: 14px 0 0; font-size: 18px; color: #c9d4e4; max-width: 820px">Binggio uses a language model for one step only: turning a question into a structured plan. Checking the plan, running it read-only on your data and building the answer all happen inside Binggio, in your environment.</p>
+<div style="margin-top: 26px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
+<div style="background: #16264a; border-radius: 16px; padding: 22px">
+<p style="margin: 0 0 12px; font-weight: 800; font-size: 17px; color: #a49dff">Sent to the model</p>
+<p style="margin: 0 0 8px; font-size: 16px; color: #e3e9f5">The question as typed</p>
+<p style="margin: 0 0 8px; font-size: 16px; color: #e3e9f5">Names, roles and types of approved tables and columns</p>
+<p style="margin: 0 0 8px; font-size: 16px; color: #e3e9f5">Approved links and business-term definitions</p>
+<p style="margin: 0; font-size: 16px; color: #e3e9f5">Category labels of approved columns, such as PREMIUM or MISSED</p>
+</div>
+<div style="background: #16264a; border-radius: 16px; padding: 22px">
+<p style="margin: 0 0 12px; font-weight: 800; font-size: 17px; color: #3ddc97">Never sent to the model</p>
+<p style="margin: 0 0 8px; font-size: 16px; color: #e3e9f5">Rows from any table</p>
+<p style="margin: 0 0 8px; font-size: 16px; color: #e3e9f5">Answers and result values</p>
+<p style="margin: 0 0 8px; font-size: 16px; color: #e3e9f5">Database passwords and connection details</p>
+<p style="margin: 0; font-size: 16px; color: #e3e9f5">Anything from tables or columns nobody approved</p>
+</div>
+</div>
+<p style="margin: 22px 0 0; font-size: 15.5px; color: #c9d4e4">Run it with no model at all, using saved plans or an AI agent over MCP. Choosing your own model provider, including one in your own cloud or on your own servers, is coming soon.</p>
+</div>
 </div>
 </section>
 
